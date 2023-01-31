@@ -114,6 +114,19 @@ header .logo{
     color: var(--acent-color);
 }
 
+.active::after{
+    display: inline-block;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: var(--acent-color);
+    border-radius: 2px;
+    bottom: 0;
+    left: 0;
+
+}
+
 /* contakts list */
 .header .contakts{
     display: flex;
@@ -151,6 +164,7 @@ margin-right: 10px;
 
 .item{
     display: flex;
+    position: relative;
 }
 
 /* Footer */
@@ -320,6 +334,29 @@ img{
     max-width: 100%;
     height: auto;
 }
+.work-item{
+    position: relative;
+}
+.work-text{
+    position: absolute;
+width: 370px;
+height: 70px;
+background-color: var(--bgc-footer-color);
+padding: 27px;
+bottom: 0;
+opacity: 0.8;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 16px;
+text-align: center;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+
+color: var(--white-color);
+}
 
 /* Team */
 
@@ -401,6 +438,7 @@ margin-top: 10px;
 
    .galery-link{
     display: block;
+    position: relative;
    }
 
    .galery-link:hover,
@@ -422,6 +460,31 @@ margin-top: 10px;
    letter-spacing: 0.03em;
 
    margin-top: 4px;
+   }
+
+   .galery-link:hover .galery-img-text{
+    opacity: 0.9;
+   }
+
+
+   .galery-img-text{
+    position: absolute;
+    width: 100%;
+    height: 294px;
+    background-color: var(--acent-color);
+    top: 0;
+    opacity: 0;
+    padding: 63px 24px;
+    transition: 250ms opacity linear;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 156%;
+    letter-spacing: 0.03em;
+    
+    color: #FFFFFF;
    }
 
    .team-person{
